@@ -148,3 +148,61 @@ const multiply2 = (a, b) => {
     return result;
 };
 console.log("Умножение:", multiply2(6, 7));
+let user = {
+    name: "Ivan",
+    age: 20,
+    isStudent: true
+};
+console.log(user);
+console.log(user.name);
+console.log(user["age"]);
+
+let book = {
+    title: "Война и мир",
+    author: "Лев Толстой",
+    year: 1869
+};
+console.log(book.title);
+console.log(book.author);
+console.log(book.year);
+book.year = 2020;
+console.log(book);
+
+user.city = "Москва";
+console.log(user);
+delete user.isStudent;
+console.log(user);
+
+let user2 = {
+    name: "Ivan",
+    age: 20,
+    isStudent: true,
+    sayHello: function() {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+};
+user2.sayHello();
+
+let car = {
+    brand: "Toyota",
+    year: 2022,
+    getInfo: function() {
+        console.log(`Автомобиль: ${this.brand}, Год: ${this.year}`);
+    }
+};
+car.getInfo();
+
+for (let key in user) {
+    console.log(`${key}: ${user[key]}`);
+}
+
+let student = {
+    name: "Анна",
+    age: 20,
+    address: {
+        city: "Москва",
+        street: "Тверская",
+        house: 15
+    }
+};
+console.log(student.address.city);
